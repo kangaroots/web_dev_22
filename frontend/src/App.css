@@ -1,0 +1,328 @@
+/*  ===== MOBILE styles (reside at the top and are inherited by all devices) ===== */
+/*  ===== See tablet, desktop, and print @media queries at the bottom. */
+
+
+/*   ----- Imports  -----  */
+/* Add fonts from the app's server 
+@font-face {                
+font-family: 'FontName';
+src: url('FontName.woff2') format('woff2');
+} 
+*/                           
+
+/* ...or hosted services like Google Fonts*/ 
+@import url(//fonts.googleapis.com/css?family=Jost);
+
+
+@import '../node_modules/modern-normalize/modern-normalize.css';
+        /* npm install modern-normalize 
+            Resets elements for browser consistancy.  
+            http://nicolasgallagher.com/about-normalize-css/ 
+          */
+
+          /* Component-specific stylesheets, if any 
+@import "component1.css";   
+          */
+
+/*   ----- Variables  -----  */
+:root {
+  --dark-gray-font:#283845;
+  --off-white:#f6f6fa;
+}
+
+/*  ----- Viewport ----- elements inherited by all remaining elements ----- */
+body {       /* Can alternatively define in html {} or :root {} */
+  /* margin:0 auto; */
+  min-width:400px;
+  max-width:100%;
+  background-color:var(--off-white);
+  color:var(--dark-gray-font);
+  font-family: 'Jost', sans-serif;
+  font-size: 1.1em;
+  margin:2%;
+  padding:1% 2%;
+}
+
+/* ----- Anchors ----- Text links */
+a {}
+a:link {}
+a:hover {}
+a:active {}
+a:visited {}
+
+/*  ----- Navigation ----- Override text links for navigation only.  */
+nav {
+  text-align:left;
+  vertical-align: middle;
+}
+nav a {
+  background-color:#1E5B6A;
+  color:var(--off-white);
+  border:2px solid #1E5B6A;
+  border-radius:6px 6px 0 0; 
+  font-size:1.1em;
+  font-weight:bold;
+  margin-right:3px;
+  padding: 5px 20px 5px 20px;
+  text-decoration:none;
+}
+nav a:hover {
+  background-color:var(--off-white);
+  color:#1E5B6A;
+}
+
+/*  ----- Page layout blocks -----  */
+header {
+  background-color:#b7d4e6c4;
+  color:var(--dark-gray-font);
+  border:2px solid #1E5B6A;
+  font-size: 110%;
+  font-weight: normal;
+  margin-bottom:1em;
+  margin-top: 1em;
+  padding:1.5%;
+}
+footer {
+  background-color:#b7d4e6c4;
+  color:var(--dark-gray-font);
+  border:2px solid #1E5B6A;
+  font-size: 1em;
+  font-weight: normal;
+  margin-bottom:1em;
+  margin-top: 1em;
+  padding:1.5%;
+}
+.App-logo {
+  font-size: 80px;
+  float:left;
+}
+main {
+  background-color:var(--off-white);
+  color:var(--dark-gray-font);
+  border:2px solid #00a896;
+  margin:0;
+  padding:1.5%;
+}
+
+
+/*  -----  Typography  ----- */
+p {}
+br {}
+ol, ul, dl {}
+li {}
+dt {}
+dd {}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Jost', sans-serif;
+} /* Define consistent font family.*/
+h1 {}
+h2 {}
+h3 {}
+h4 {}
+h5 {}
+h6 {}
+
+abbr {}
+acronym {}
+address {}
+blockquote {}
+  q {}
+  cite {}
+em {}
+hr {}
+mark {}
+s {}
+span {}
+strong {}
+sub {}
+sup {}
+time {}
+
+/*  ----- Coding or instructional typography ----- */
+pre {}
+code {}
+kbd {}
+samp {}
+var {}
+del {} 
+ins {}
+
+/*  ----- Table ----- */
+table {
+  border-collapse:collapse;
+  border: navy;
+  display: block;
+  overflow-x: auto;
+  border-spacing: 0;
+  margin:0 auto;
+  margin-bottom: 1em;
+  padding:1%;
+}
+caption {
+  padding: 2%;
+}
+thead {
+  height: 25px;
+}
+tbody {
+  text-align: right;
+}
+
+tfoot {}
+tr td {
+  border-bottom:1px solid #648FFF;
+  }
+tr th {
+  background-color:#6fb3b8da;
+  padding:1%;
+  text-align: right;
+  min-width: 85px;
+}
+th, td {
+  border:1px solid navy;
+  padding: 7px;
+  border-top-width: 0;
+  border-left-width: 0;
+}
+th {
+  position: relative;
+  top: 0;
+  vertical-align: bottom;
+}
+
+th:nth-child(2),
+td:nth-child(2) {text-align:right;}
+
+th:nth-child(3),
+td:nth-child(3) {text-align:right;}
+
+tr:nth-child(odd) td {background-color:#b7d4e674;}
+tr:nth-child(even) th {background-color:#a4c3b2;}
+colgroup {}
+.quantity-icon {
+  font-size: 1.3em;
+  margin: 3%;
+}
+data {}
+datalist {}
+th, td {
+  border:1px solid navy;
+}
+
+/*  ----- Form ----- */
+form {
+  /* display: block; */
+  font-family: 'Jost', sans-serif;
+  font-size: 1.1em;
+  margin:1%;
+  padding:1% 2%;
+}
+fieldset {
+  border: 1px solid transparent;
+  margin-top:1%;
+  padding:1%;
+
+}
+legend {
+  color:#077368;
+  font-weight: bold;
+}
+label {
+  display:block;
+  margin-left: 1%;
+  font-size: 80%;
+
+}
+input {
+  margin:1%;
+  font-family: 'Jost', sans-serif;
+  font-size: 1.1em;
+  text-align: center;
+  padding:1%;
+}
+
+input:focus {
+  background-color: #08b7a526;
+}
+
+button {
+  margin:2%;
+  font-family: 'Jost', sans-serif;
+  font-size: 1.1em;
+  color:#f6f6fa;
+  background-color:#3c096c;
+  background-image: linear-gradient(to top left,
+  rgba(218, 44, 237, 0.288),
+  rgba(218, 44, 237, .2) 30%,
+  rgba(218, 44, 237, 0));
+  box-shadow: inset 2px 2px 3px rgba(189, 195, 219, 0.6),
+  inset -2px -2px 3px rgba(200, 76, 220, 0.6);
+  border: 2px solid #983aa867;
+  border-radius: 10px;
+  padding:1% 2%;
+  }
+button:hover {
+  color:#3c096c;
+  background-color: #f6f6fa;
+  border: 2px solid #3c096c;
+}
+  output {}
+  meter {}
+  progress {}
+select {
+  margin:1%;
+  font-family: 'Jost', sans-serif;
+  font-size: 1.1em;
+  padding:1% 2%;
+}
+    optgroup {}
+    option {}
+  textarea {}
+
+/* ----- Media ----- */
+figure {}
+  figcaption {}
+img {}
+svg {}
+picture {}
+  source {}
+iframe {}
+video {}
+audio {}
+embed {}
+object {}
+
+
+/*  ----- Classes for alignment, positioning, widths, grids, embellishments, and animation -----  */
+.floatright {}
+.floatleft {}
+.center-middle {}
+
+.ten {}
+.twenty {}
+.thirty {}
+.forty {}
+.fifty {}
+.sixty {}
+.seventy {}
+.eighty {}
+
+.radius {}
+.circle {}
+.boxshadow {}
+.tshadow {} 
+.gradient {}
+.shape {}
+
+@keyframes App-logo {}
+
+/*   ===== TABLET  media query overrides mobile styles ===== */
+@media all and (min-width: 600px) {}
+
+/*   ===== DESKTOP  media query overrides mobile and tablet styles ===== */
+@media all and (min-width: 1080px) {}
+
+/*   ===== PRINT  media query overrides previous styles =====  */
+@media print {}
+
